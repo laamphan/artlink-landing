@@ -59,7 +59,8 @@
   text-transform: uppercase;
 }
 
-.nav-item.active {
+.nav-item.active,
+.nav-item.active > .nav-link {
   color: #ee574c;
 }
 

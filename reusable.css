@@ -150,9 +150,6 @@ h6 {
 }
 
 .avatar-trending {
-  /* width: 4.5rem; */
-  /* height: 4.5rem; */
-
   width: min(15vw, 4rem);
   height: min(15vw, 4rem);
 }
@@ -160,7 +157,6 @@ h6 {
 .avatar-members {
   height: min(20vw, 5rem);
 
-  /* position: relative; */
   margin-top: max(-3em, -10vw);
 }
 
@@ -168,8 +164,6 @@ h6 {
   display: inline-block;
 
   padding: min(5vw, var(--space-xs)) min(8vw, var(--space-m));
-
-  /* z-index: index inf; */
 
   font-size: min(9vw, var(--step--1));
   font-weight: 600;
@@ -250,7 +244,6 @@ h6 {
 }
 
 .icon-add {
-  /* padding: 0.2rem; */
   padding: min(1vw, var(--space-3xs));
   background-color: #1f86ef;
 
@@ -263,11 +256,11 @@ h6 {
 .icon-check {
   position: relative;
 
-  font-size: min(10vw, var(--step--1));
   margin-left: max(-9vw, -0.8rem);
   padding: 1px;
   background-color: #fff;
 
+  font-size: min(10vw, var(--step--1));
   color: #ee574c;
 
   border-radius: 50%;
@@ -382,52 +375,16 @@ h6 {
   margin-right: auto;
 }
 
-.mt-1 {
-  margin-top: var(--space-3xs);
-}
-
-.mr-1 {
-  margin-right: var(--space-3xs);
-}
-
 .mb-1 {
   margin-bottom: var(--space-3xs);
-}
-
-.ml-1 {
-  margin-left: calc(1.2 * var(--space-3xs));
-}
-
-.mt-2 {
-  margin-top: var(--space-2xs);
-}
-
-.mr-2 {
-  margin-right: var(--space-2xs);
 }
 
 .mb-2 {
   margin-bottom: var(--space-2xs);
 }
 
-.ml-2 {
-  margin-left: var(--space-2xs);
-}
-
-.mt-3 {
-  margin-top: var(--space-xs);
-}
-
-.mr-3 {
-  margin-right: var(--space-xs);
-}
-
 .mb-3 {
   margin-bottom: var(--space-xs);
-}
-
-.ml-3 {
-  margin-left: var(--space-xs);
 }
 
 .mb-4 {
@@ -436,6 +393,67 @@ h6 {
 
 .mb-6 {
   margin-bottom: var(--space-l);
+}
+
+.ml-1 {
+  margin-left: calc(1.2 * var(--space-3xs));
+}
+
+.ml-2 {
+  margin-left: var(--space-2xs);
+}
+
+.ml-3 {
+  margin-left: var(--space-xs);
+}
+
+.mr-1 {
+  margin-right: var(--space-3xs);
+}
+
+.mr-2 {
+  margin-right: var(--space-2xs);
+}
+
+.mr-3 {
+  margin-right: var(--space-xs);
+}
+
+.mt-1 {
+  margin-top: var(--space-3xs);
+}
+
+.mt-2 {
+  margin-top: var(--space-2xs);
+}
+
+.mt-3 {
+  margin-top: var(--space-xs);
+}
+
+.text-blue {
+  color: #183b56;
+}
+
+.text-green {
+  color: #1d9b7b;
+}
+
+.text-highlight {
+  width: max-content;
+
+  color: transparent;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    to left,
+    #e03952,
+    #f99164,
+    #f2c85d,
+    #94a589,
+    #1f86ef
+  );
 }
 
 .w-40 {

@@ -1,5 +1,8 @@
 // Toggle Mobile Navigation Bar
 function toggleMobileNavbar() {
+  // ! separate into 2 functions
+
+  // Expand mobile navigation
   let x = document.getElementsByClassName("nav-expand");
   if (x[0].classList.contains("nav-expanded")) {
     x[0].classList.remove("nav-expanded");
@@ -7,6 +10,7 @@ function toggleMobileNavbar() {
     x[0].classList.add("nav-expanded");
   }
 
+  // Overlay to close Nav when click out
   let y = document.getElementsByClassName("js-overlay-nav-close");
   let z = y[0];
   if (z.classList.contains("z-m1")) {
@@ -18,6 +22,7 @@ function toggleMobileNavbar() {
   }
 }
 
+// Toggle Dropdown and hide others
 function toggleDropdown(el) {
   x = el.parentElement;
   if (!x.classList.contains("active")) {
@@ -32,6 +37,7 @@ function toggleDropdown(el) {
   }
 }
 
+// Collapse all dropdowns
 function collapseDropdowns() {
   x = document.getElementsByClassName("nav-items");
   for (let i = 0; i < x[0].children.length; i++) {
@@ -39,44 +45,13 @@ function collapseDropdowns() {
   }
 }
 
-function toggleNavbar() {
-  let x = document.getElementsByClassName("nav-items");
-  for (let i = 0; i < x[0].children.length; i++) {
-    if (x[0].children[i].classList.contains("active")) {
-      x[0].children[i].classList.remove("active");
-    }
-  }
-
-  let y = document.getElementsByClassName("js-overlay-nav-close");
-  let z = y[0];
-  if (z.classList.contains("z-m1")) {
-    z.classList.remove("z-m1");
-    z.classList.add("z-100");
-  } else {
-    z.classList.add("z-m1");
-    z.classList.remove("z-100");
-  }
-}
-
 function closeNavBar() {
-  // let x = document.getElementsByClassName("nav-items");
-  // for (let i = 0; i < x[0].children.length; i++) {
-  //   if (x[0].children[i].classList.contains("active")) {
-  //     x[0].children[i].classList.remove("active");
-  //   }
-  // }
-
   let y = document.getElementsByClassName("js-overlay-nav-close");
   let z = y[0];
   if (z.classList.contains("z-m1")) {
     z.classList.remove("z-m1");
     z.classList.add("z-100");
   }
-
-  // else {
-  //   z.classList.add("z-m1");
-  //   z.classList.remove("z-100");
-  // }
 }
 
 // DOM utility functions:
@@ -240,5 +215,4 @@ const carousel = (elCarousel) => {
 };
 
 // Allows to use multiple carousels on the same page:
-// window.onresize = els(".carousel").forEach(carousel);
 els(".carousel").forEach(carousel);
