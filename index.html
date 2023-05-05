@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="reusable.css" />
+      <link rel="stylesheet" href="nav.css" class="css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <title>Artlink</title>
+    </head>
+
+    <body>
+      <!-- start of nav-bar -->
+      <div class="nav-bar no-select">
+        <div class="nav-mobile">
+          <img class="logo" src="img/logo-dark.png"" />
+          <div class="nav-mobile-toggle">
+            <img
+              class="icon-menu"
+              src="img/menu.svg"
+              alt=""
+              onclick="toggleMobileNavbar(); collapseDropdowns()"
+            />
+          </div>
+        </div>
+
+        <!-- expand on mobile / show on desktop -->
+        <div class="nav-expand">
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="dropdown-home"
+                onclick="toggleDropdown(this); closeNavBar()"
+              >
+                Home
+                <iconify-icon
+                  class="icon-arrow-down"
+                  icon="material-symbols:keyboard-arrow-down-rounded"
+                ></iconify-icon>
+              </a>
+              <ul class="dropdown">
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 1
+                </li>
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 2
+                </li>
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 3
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="dropdown-pages"
+                onclick="toggleDropdown(this); closeNavBar()"
+              >
+                Pages
+                <iconify-icon
+                  class="icon-arrow-down"
+                  icon="material-symbols:keyboard-arrow-down-rounded"
+                ></iconify-icon>
+              </a>
+              <ul class="dropdown">
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 1
+                </li>
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 2
+                </li>
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 3
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="dropdown-profile"
+                onclick="toggleDropdown(this); closeNavBar()"
+              >
+                Profile
+                <iconify-icon
+                  class="icon-arrow-down"
+                  icon="material-symbols:keyboard-arrow-down-rounded"
+                ></iconify-icon>
+              </a>
+              <ul class="dropdown">
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 1
+                </li>
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 2
+                </li>
+                <li class="dropdown-item">
+                  <iconify-icon
+                    class="icon-home"
+                    icon="material-symbols:home-outline-rounded"
+                  ></iconify-icon>
+                  Home Page 3
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marketplace</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Collection</a>
+            </li>
+          </ul>
+          <a class="button button-orange mb-3" href="#">Connect To Wallet</a>
+        </div>
+        <a class="button button-orange" href="#">Connect To Wallet</a>
+      </div>
+      <!-- end of nav-bar -->
+
+      <!-- overlay to collapse dropdowns & nav -->
+      <div
+        class="js-overlay-nav-close z-m1"
+        onclick="toggleMobileNavbar();collapseDropdowns()"
+      ></div>
+
+      <!-- start of hero -->
+      <section>
+        <div class="container container-hero">
+          <div>
+            <div class="hero-brief">
+              <h1>
+                Discover The Largest<br />
+                <span class="text-orange">NFT</span> Marketplace
+              </h1>
+              <p class="mt-3 mb-6">
+                A New Place To Collect And Connect NFT Across The World. It’s
+                come with a creative design, home page options, different
+                explore and digital asset pages and items.
+              </p>
+              <a href="#" class="button button-blue"> Explore </a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <h3>32K+</h3>
+                <p>Smartwork</p>
+              </div>
+              <div>
+                <h3>20K+</h3>
+                <p>Action</p>
+              </div>
+              <div>
+                <h3>10K+</h3>
+                <p>Market</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel hero-carousel">
+            <div class="carousel-items hero-carousel-items">
+              <!-- start of carousel-item -->
+              <div class="carousel-item hero-carousel-item">
+                <img
+                  class="carousel-item-img"
+                  src="img/hero/img1.png"
+                  alt="img"
+                />
+                <div class="hero-carousel-item-content">
+                  <div class="fxw-w w-100">
+                    <div class="mt-3 ml-3">
+                      <p class="hero-carousel-item-name">Analysis</p>
+                      <h5 class="hero-carousel-item-price">3.4 ETH</h5>
+                    </div>
+                  </div>
+                  <div class="hero-carousel-item-bid-button">
+                    <a href="#" class="button button-blue button-cut">BID</a>
+                  </div>
+                </div>
+                <div class="hero-carousel-item-avatars ml-2 mb-4">
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                  />
+                  <iconify-icon
+                    class="icon-check"
+                    icon="mdi:check-circle"
+                  ></iconify-icon>
+                </div>
+              </div>
+
+              <!-- start of carousel-item -->
+              <div class="carousel-item hero-carousel-item">
+                <img
+                  class="carousel-item-img"
+                  src="img/hero/img2.png"
+                  alt="img"
+                />
+                <div class="hero-carousel-item-content">
+                  <div class="fxw-w w-100">
+                    <div class="mt-3 ml-3">
+                      <p class="hero-carousel-item-name">Analysis</p>
+                      <h5 class="hero-carousel-item-price">3.4 ETH</h5>
+                    </div>
+                  </div>
+                  <div class="hero-carousel-item-bid-button">
+                    <a href="#" class="button button-blue button-cut">BID</a>
+                  </div>
+                </div>
+                <div class="hero-carousel-item-avatars ml-2 mb-4">
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                  />
+                  <iconify-icon
+                    class="icon-check"
+                    icon="mdi:check-circle"
+                  ></iconify-icon>
+                </div>
+              </div>
+
+              <!-- start of carousel-item -->
+              <div class="carousel-item hero-carousel-item">
+                <img
+                  class="carousel-item-img"
+                  src="img/hero/img3.png"
+                  alt="img"
+                />
+                <div class="hero-carousel-item-content">
+                  <div class="fxw-w w-100">
+                    <div class="mt-3 ml-3">
+                      <p class="hero-carousel-item-name">Analysis</p>
+                      <h5 class="hero-carousel-item-price">3.4 ETH</h5>
+                    </div>
+                  </div>
+                  <div class="hero-carousel-item-bid-button">
+                    <a href="#" class="button button-blue button-cut">BID</a>
+                  </div>
+                </div>
+                <div class="hero-carousel-item-avatars ml-2 mb-4">
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                  />
+                  <iconify-icon
+                    class="icon-check"
+                    icon="mdi:check-circle"
+                  ></iconify-icon>
+                </div>
+              </div>
+
+              <!-- start of carousel-item -->
+              <div class="carousel-item hero-carousel-item">
+                <img
+                  class="carousel-item-img"
+                  src="img/hero/img4.png"
+                  alt="img"
+                />
+                <div class="hero-carousel-item-content">
+                  <div class="fxw-w w-100">
+                    <div class="mt-3 ml-3">
+                      <p class="hero-carousel-item-name">Analysis</p>
+                      <h5 class="hero-carousel-item-price">3.4 ETH</h5>
+                    </div>
+                  </div>
+                  <div class="hero-carousel-item-bid-button">
+                    <a href="#" class="button button-blue button-cut">BID</a>
+                  </div>
+                </div>
+                <div class="hero-carousel-item-avatars ml-2 mb-4">
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                  />
+                  <img
+                    class="avatar avatar-tiny avatar-border avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                  />
+                  <iconify-icon
+                    class="icon-check"
+                    icon="mdi:check-circle"
+                  ></iconify-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of hero -->
+
+      <!-- start of market -->
+      <section>
+        <div class="container market">
+          <div class="market-brief">
+            <h6 class="text-highlight">NFT Marketplace</h6>
+            <h2>
+              A New Place To Collect And <br />
+              Connect NFT Across
+            </h2>
+            <div class="market-buttons mt-2">
+              <a class="button button-orange w-max" href="">Explore Now</a>
+              <a class="button button-white w-max" href="">Create Account</a>
+            </div>
+          </div>
+
+          <div class="market-grid">
+            <div>
+              <img
+                class="market-featured-img mb-6"
+                src="img/featured.jpg"
+                alt=""
+              />
+            </div>
+            <div class="carousel market-carousel">
+              <div class="carousel-items">
+                <!-- start of carousel-item -->
+                <div class="carousel-item market-carousel-item">
+                  <div class="market-bidder">
+                    <div class="d-flex">
+                      <img
+                        class="avatar avatar-market-1"
+                        src="img/avatars/img1.jpg"
+                        alt=""
+                      />
+                      <div class="ml-2">
+                        <p>Floshka</p>
+                        <h6>Morvin McKinny</h6>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        class="avatar avatar-market-2"
+                        src="img/icons/eth.png"
+                        alt=""
+                      />
+                      <div class="ml-2">
+                        <p>Instant Price</p>
+                        <h6>3.4 ETH</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="market-bid d-flex-col">
+                    <div class="market-bid-name">
+                      <h3>Galaxy On Earth</h3>
+                      <p>10 Edition Minted</p>
+                    </div>
+                    <div class="market-bid-price">
+                      <div class="text-center">
+                        <h6>Starting Bid</h6>
+                        <p class="text-blue">
+                          <span class="fz-4">1.02</span> ETH
+                        </p>
+                      </div>
+                      <hr />
+                      <div class="market-bid-countdown">
+                        <div class="mlr-auto">
+                          <p class="text-blue fz-4">20</p>
+                          <p class="text-blue">Hrs</p>
+                        </div>
+                        <div class="mlr-auto">
+                          <p class="text-blue fz-4">36</p>
+                          <p class="text-blue">Min</p>
+                        </div>
+                        <div class="mlr-auto">
+                          <p class="text-blue fz-4">08</p>
+                          <p class="text-blue">Sec</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <a href="" class="button button-orange w-100 mb-1">
+                        Place a bid</a
+                      >
+                      <a href="" class="button button-white w-100">
+                        Create account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- start of carousel-item -->
+                <div class="carousel-item market-carousel-item">
+                  <div class="market-bidder">
+                    <div class="d-flex">
+                      <img
+                        class="avatar avatar-market-1"
+                        src="img/avatars/img1.jpg"
+                        alt=""
+                      />
+                      <div class="ml-2">
+                        <p>Floshka</p>
+                        <h6>Morvin McKinny</h6>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        class="avatar avatar-market-2"
+                        src="img/icons/eth.png"
+                        alt=""
+                      />
+                      <div class="ml-2">
+                        <p>Instant Price</p>
+                        <h6>3.4 ETH</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="market-bid d-flex-col">
+                    <div class="market-bid-name">
+                      <h3>Galaxy On Earth</h3>
+                      <p>10 Edition Minted</p>
+                    </div>
+                    <div class="market-bid-price">
+                      <div class="text-center">
+                        <h6>Starting Bid</h6>
+                        <p class="text-blue">
+                          <span class="fz-4">1.02</span> ETH
+                        </p>
+                      </div>
+                      <hr />
+                      <div class="market-bid-countdown">
+                        <div class="mlr-auto">
+                          <p class="text-blue fz-4">20</p>
+                          <p class="text-blue">Hrs</p>
+                        </div>
+                        <div class="mlr-auto">
+                          <p class="text-blue fz-4">36</p>
+                          <p class="text-blue">Min</p>
+                        </div>
+                        <div class="mlr-auto">
+                          <p class="text-blue fz-4">08</p>
+                          <p class="text-blue">Sec</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <a href="" class="button button-orange w-100 mb-1">
+                        Place a bid</a
+                      >
+                      <a href="" class="button button-white w-100">
+                        Create account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of market -->
+
+      <!-- start of collection -->
+      <section>
+        <div class="container collection">
+          <div class="collection-grid-outer">
+            <div class="collection-brief mb-6">
+              <h6 class="text-highlight">NFT Collection</h6>
+              <h2 class="">Collect And Connect NFT Marketplace</h2>
+              <p class="mb-3">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+                dolorem saepe, nihil quo explicabo magni adipisci qui officia!
+                Quas neque nobis libero id.
+              </p>
+              <a
+                class="button button-white"
+                href=""
+                style="align-self: flex-start"
+                >Create Account
+                <iconify-icon
+                  class="icon-arrow-right"
+                  icon="material-symbols:arrow-forward-ios-rounded"
+                ></iconify-icon>
+              </a>
+            </div>
+            <div class="collection-grid-inner mt-3">
+              <!-- start of grid-box -->
+              <div class="collection-grid-box">
+                <iconify-icon
+                  class="icon-with-bg icon-wallet"
+                  icon="material-symbols:account-balance-wallet"
+                ></iconify-icon>
+                <h6 class="w-max">Digital Wallet</h6>
+                <p class="text-blue">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+              </div>
+
+              <!-- start of grid-box -->
+              <div class="collection-grid-box">
+                <iconify-icon
+                  class="icon-with-bg icon-collage"
+                  icon="mdi:collage"
+                ></iconify-icon>
+                <h6 class="w-max">Digital Wallet</h6>
+                <p class="text-blue">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+              </div>
+
+              <!-- start of grid-box -->
+              <div class="collection-grid-box">
+                <iconify-icon
+                  class="icon-with-bg icon-checker"
+                  icon="mdi:checkerboard"
+                ></iconify-icon>
+                <h6 class="w-max">Digital Wallet</h6>
+                <p class="text-blue">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+              </div>
+
+              <!-- start of grid-box -->
+              <div class="collection-grid-box">
+                <iconify-icon
+                  class="icon-with-bg icon-security"
+                  icon="material-symbols:security"
+                ></iconify-icon>
+                <h6 class="w-max">Digital Wallet</h6>
+                <p class="text-blue">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of collection -->
+
+      <!-- start of trending -->
+      <section>
+        <div class="container trending">
+          <div class="mb-6">
+            <h6 class="text-highlight">Trending NFT</h6>
+            <h2>Best Sellers</h2>
+            <p class="text-blue">Best Sellers of the Month's NFT</p>
+          </div>
+          <div class="carousel trending-carousel">
+            <div class="carousel-items trending-carousel-items">
+              <!-- start of carousel-item -->
+              <div class="carousel-item trending-carousel-item">
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best1.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best2.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best3.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best4.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best5.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best6.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- start of carousel-item -->
+              <div class="carousel-item trending-carousel-item">
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best1.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best1.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+
+                <!-- start of carousel-subitem -->
+                <div class="trending-carousel-subitem">
+                  <div class="d-flex">
+                    <img class="avatar avatar-trending""
+                    src="img/best-sellers/best1.png" alt="" />
+                    <div class="ml-1">
+                      <h6>2.6 ETH</h6>
+                      <p class="text-blue">Someone</p>
+                      <p>@Something</p>
+                    </div>
+                  </div>
+                  <div class="d-flex-col text-center">
+                    <iconify-icon
+                      class="icon-add"
+                      icon="material-symbols:add"
+                    ></iconify-icon>
+                    <p>#1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of trending -->
+
+      <!-- start of discover -->
+      <section>
+        <div class="container discover">
+          <div class="discover-brief mb-6">
+            <div class="mb-3">
+              <h2>Discover - Find Best NFT</h2>
+              <p>Start an Extraordinary Era of Digital Art and Music</p>
+            </div>
+            <a href="" class="button button-orange">Discover All </a>
+          </div>
+          <div class="discover-items">
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item1.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item2.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item3.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item4.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item5.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item6.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item7.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+
+            <!-- start of discover-item -->
+            <div class="discover-item">
+              <img class="discover-item-img" src="img/items/item8.png" alt="" />
+              <div class="discover-item-line-1">
+                <div>
+                  <h6>Community On Tour</h6>
+                  <p>@imogee</p>
+                </div>
+                <h6 class="text-green">2.14 ETH</h6>
+              </div>
+              <div class="discover-item-line-2 mt-2 mb-1">
+                <div class="avatars">
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-1"
+                    src="img/avatars/img1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-2"
+                    src="img/avatars/img2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="avatar avatar-border avatar-tiny avatar-overlap-3"
+                    src="img/avatars/img3.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="w-40 text-right">200 Subscribers</p>
+              </div>
+              <div class="discover-item-line-3">
+                <p class="text-blue">Min Bid : <span>0.48 ETH</span></p>
+                <p class="text-blue">NEW BID 🔥</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of discover -->
+
+      <!-- start of members -->
+      <section>
+        <div class="container members">
+          <div class="brief mb-6">
+            <h6 class="text-highlight">Members</h6>
+            <h2>Hot Collections</h2>
+            <p>You Can Follow Many Creators</p>
+          </div>
+          <div class="carousel members-carousel">
+            <div class="carousel-items members-carousel-items">
+              <!-- start of carousel-item -->
+              <div class="carousel-item members-carousel-item">
+                <img
+                  class="members-item-img-cover"
+                  src="img/hots/hot1.png"
+                  alt=""
+                />
+                <img
+                  class="avatar avatar-border avatar-members"
+                  src="img/avatars/img1.jpg"
+                  alt=""
+                />
+                <div class="members-item-info text-center">
+                  <h4>Greg Bitchy</h4>
+                  <p class="mb-2">
+                    Lorem ipsum dolor sit amet adipisicing elit. Assumenda in
+                    repudiandae .
+                  </p>
+                  <a class="button button-orange" href="#">+ Follow</a>
+                </div>
+              </div>
+
+              <!-- start of carousel-item -->
+              <div class="carousel-item members-carousel-item">
+                <img
+                  class="members-item-img-cover"
+                  src="img/hots/hot2.png"
+                  alt=""
+                />
+                <img
+                  class="avatar avatar-border avatar-members"
+                  src="img/avatars/img2.jpg"
+                  alt=""
+                />
+                <div class="members-item-info text-center">
+                  <h4>Greg Bitchy</h4>
+                  <p class="mb-2">
+                    Lorem ipsum dolor sit amet adipisicing elit. Assumenda in
+                    repudiandae .
+                  </p>
+                  <a class="button button-orange" href="#">+ Follow</a>
+                </div>
+              </div>
+
+              <!-- start of carousel-item -->
+              <div class="carousel-item members-carousel-item">
+                <img
+                  class="members-item-img-cover"
+                  src="img/hots/hot3.png"
+                  alt=""
+                />
+                <img
+                  class="avatar avatar-border avatar-members"
+                  src="img/avatars/img3.jpg"
+                  alt=""
+                />
+                <div class="members-item-info text-center">
+                  <h4>Greg Bitchy</h4>
+                  <p class="mb-2">
+                    Lorem ipsum dolor sit amet adipisicing elit. Assumenda in
+                    repudiandae .
+                  </p>
+                  <a class="button button-orange" href="#">+ Follow</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of members -->
+
+      <!-- start of footer -->
+      <div class="container footer">
+        <div>
+          <img class="logo-footer" src="img/logo-dark.png" alt="" />
+          <p class="logo-quote">
+            Business opportunities Are Like Buses, There's Always Another One
+            Coming...
+          </p>
+        </div>
+        <div>
+          <ul>
+            <h6 class="footer-links">Policies</h6>
+            <li>Sec & Priv</li>
+            <li>Market</li>
+            <li>Term</li>
+            <li>Collect</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <h6 class="footer-links">Company</h6>
+            <li>Home</li>
+            <li>Pages</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="footer-links">Follow Us</h6>
+          <div class="d-flex">
+            <iconify-icon
+              class="icon-socials"
+              icon="ic:baseline-facebook"
+            ></iconify-icon>
+            <iconify-icon
+              class="icon-socials"
+              icon="mdi:twitter"
+            ></iconify-icon>
+            <iconify-icon
+              class="icon-socials"
+              icon="mdi:linkedin"
+            ></iconify-icon>
+            <iconify-icon
+              class="icon-socials"
+              icon="mdi:google-plus"
+            ></iconify-icon>
+          </div>
+        </div>
+      </div>
+      <hr style="margin: 0 2ch 1ch" />
+      <p class="text-center">© 2023 Artlink. Design with ❤️ by ThemDesign.</p>
+
+      <script src="scripts.js"></script>
+      <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    </body>
+  </html>
+</html>
