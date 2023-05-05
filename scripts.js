@@ -69,7 +69,7 @@ const mod = (n, m) => ((n % m) + m) % m;
 
 const carousel = (elCarousel) => {
   const animation = 500;
-  const pause = 2000000;
+  const pause = 5000;
 
   const elCarouselSlider = el(".carousel-items", elCarousel);
   const elsSlides = els(".carousel-item", elCarouselSlider);
