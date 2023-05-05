@@ -160,6 +160,14 @@ h6 {
   margin-top: max(-3em, -10vw);
 }
 
+.bgc-white {
+  background-color: white !important;
+}
+
+.bgc-trans {
+  background-color: transparent !important;
+}
+
 .button {
   display: inline-block;
 

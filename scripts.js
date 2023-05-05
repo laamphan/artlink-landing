@@ -1,3 +1,13 @@
+// Change Navbar Style when scrolled
+const navbar = document.querySelector(".nav-bar");
+window.onscroll = () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add("nav-bar-scrolled");
+  } else {
+    navbar.classList.remove("nav-bar-scrolled");
+  }
+};
+
 // Toggle Mobile Navigation Bar
 function toggleMobileNavbar() {
   // ! separate into 2 functions
@@ -54,6 +64,10 @@ function closeNavBar() {
   }
 }
 
+// Carousel from here
+// Carousel from here
+// Carousel from here
+
 // DOM utility functions:
 
 const el = (sel, par) => (par || document).querySelector(sel);
@@ -87,6 +101,8 @@ const carousel = (elCarousel) => {
     const cMod = mod(c, tot);
     // Move slider
     elCarouselSlider.style.transitionDuration = `${ms}ms`;
+
+    // Carousel hero
     if (tot > 3) {
       if (window.matchMedia("only screen and (min-width: 1240px)").matches) {
         elCarouselSlider.style.transform = `translateX(${
@@ -97,11 +113,15 @@ const carousel = (elCarousel) => {
           ((-c - 1) * 100) / (tot + 2)
         }%)`;
       }
-    } else if (tot === 3) {
+    }
+    // Carousel Members
+    else if (tot === 3) {
       elCarouselSlider.style.transform = `translateX(${
         (((-c - 1) * 100) / (tot + 2) / 5) * 2
       }%)`;
-    } else {
+    }
+    // Carousel of 2 items
+    else {
       elCarouselSlider.style.transform = `translateX(${
         ((-c - 1) * 100) / (tot + 2)
       }%)`;

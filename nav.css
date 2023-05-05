@@ -15,6 +15,11 @@
   display: none;
 }
 
+.nav-bar-scrolled {
+  background-color: #fff !important;
+  box-shadow: 0px 3px 10px 0px rgba(24, 59, 86, 0.2);
+}
+
 .nav-mobile {
   display: flex;
   justify-content: space-between;
