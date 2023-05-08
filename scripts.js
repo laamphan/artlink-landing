@@ -83,7 +83,7 @@ const mod = (n, m) => ((n % m) + m) % m;
 
 const carousel = (elCarousel) => {
   const animation = 500;
-  const pause = 5000;
+  const pause = 3000;
 
   const elCarouselSlider = el(".carousel-items", elCarousel);
   const elsSlides = els(".carousel-item", elCarouselSlider);
@@ -117,7 +117,8 @@ const carousel = (elCarousel) => {
     // Carousel Members
     else if (tot === 3) {
       elCarouselSlider.style.transform = `translateX(${
-        (((-c - 1) * 100) / (tot + 2) / 5) * 2
+        // (((-c - 1) * 100) / (tot + 2) / 5) * 2
+        ((-c - 1) * 100) / (tot + 4)
       }%)`;
     }
     // Carousel of 2 items
@@ -226,6 +227,11 @@ const carousel = (elCarousel) => {
   // Clone first and last slides (for "infinite" slider effect)
   elCarouselSlider.prepend(elsSlides[tot - 1].cloneNode(true));
   elCarouselSlider.append(elsSlides[0].cloneNode(true));
+
+  if (tot === 3) {
+    elCarouselSlider.prepend(elsSlides[tot - 2].cloneNode(true));
+    elCarouselSlider.append(elsSlides[1].cloneNode(true));
+  }
 
   // Initial slide
   anim();

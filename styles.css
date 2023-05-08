@@ -141,19 +141,21 @@ section:nth-of-type(2n + 4) {
 }
 
 .members-carousel-items {
-  width: calc(5 * 100%);
+  width: calc(7 * 100%);
 }
 
 .members-carousel-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
 
-  padding: var(--space-s) var(--space-s);
-  width: 100%;
+  margin: 0 auto;
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 20px solid transparent;
   border-radius: 0.8rem;
+}
+
+.members-item-img-cover {
+  width: 100%;
 }
 
 .members-carousel > .carousel-navigation {
@@ -203,12 +205,8 @@ section:nth-of-type(2n + 4) {
 
 /* end of carousel */
 
-.container {
-  position: relative;
-
-  max-width: 100ch;
-  margin: 0 auto;
-  padding: 0 var(--space-2xs);
+.collection-grid-box {
+  padding: 1rem 1rem 1rem 0;
 }
 
 .collection-grid-inner {
@@ -216,13 +214,12 @@ section:nth-of-type(2n + 4) {
   grid-template-columns: repeat(2, fit-content(50%));
 }
 
-.collection-grid-box {
-  padding: 1rem 1rem 1rem 0;
-}
+.container {
+  position: relative;
 
-.discover-items {
-  display: grid;
-  gap: 1rem;
+  max-width: 100ch;
+  margin: 0 auto;
+  padding: 0 var(--space-2xs);
 }
 
 .discover-item-img {
@@ -252,43 +249,9 @@ section:nth-of-type(2n + 4) {
   border-radius: 0.6rem;
 }
 
-.market-bid-countdown {
-  display: flex;
-  flex-wrap: wrap;
-
-  text-align: center;
-  font-weight: 500;
-}
-
-.market-bid-price {
-  margin: var(--space-s) 0;
-  padding: var(--space-s) min(5vw, var(--space-s));
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 1.4rem;
-}
-
-.market-bidder > div {
-  align-items: center;
-}
-
-.market-bidder {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.discover-items {
+  display: grid;
   gap: 1rem;
-
-  margin-bottom: var(--space-l);
-}
-
-.market-featured-img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  border-radius: 0.5rem;
 }
 
 .footer {
@@ -323,6 +286,36 @@ section:nth-of-type(2n + 4) {
   row-gap: 1.3rem;
 }
 
+.market-bid-countdown {
+  display: flex;
+  flex-wrap: wrap;
+
+  text-align: center;
+  font-weight: 500;
+}
+
+.market-bid-price {
+  margin: var(--space-s) 0;
+  padding: var(--space-s) min(5vw, var(--space-s));
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1.4rem;
+}
+
+.market-bidder > div {
+  align-items: center;
+}
+
+.market-bidder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: var(--space-l);
+}
+
 .market-brief {
   margin: var(--space-xl) auto;
 }
@@ -336,8 +329,13 @@ section:nth-of-type(2n + 4) {
   gap: 0.7rem;
 }
 
-.members-item-img-cover {
+.market-featured-img {
+  display: block;
+
   width: 100%;
+  height: auto;
+
+  border-radius: 0.5rem;
 }
 
 @media only screen and (max-width: 250px) {
@@ -520,9 +518,8 @@ section:nth-of-type(2n + 4) {
     align-items: baseline;
   }
 
-  .members-carousel-item {
-    margin: 0 1rem;
-    width: calc(calc(20% / 3));
+  .members-carousel-items {
+    width: calc(7 * 100% / 3);
   }
 
   .footer {
