@@ -1,3 +1,8 @@
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
 section {
   padding: 5rem 0;
 }
@@ -21,6 +26,8 @@ section:nth-of-type(2n + 4) {
   display: flex;
 
   width: calc(4 * 100%);
+
+  user-select: none;
 }
 
 .carousel-item {
@@ -86,6 +93,10 @@ section:nth-of-type(2n + 4) {
 
 .carousel-bullet.is-active {
   background: #ee574c;
+}
+
+.copyright-notice {
+  margin: 1.5ch 0;
 }
 
 .hero-carousel-items {
@@ -189,7 +200,7 @@ section:nth-of-type(2n + 4) {
   border-radius: 0.6rem;
 }
 
-.trending-carousel-subitem > .d-flex {
+.trending-carousel-subitem > .flex {
   align-items: center;
 }
 
@@ -378,6 +389,8 @@ section:nth-of-type(2n + 4) {
   .nav-mobile {
     height: 100% !important;
     max-height: fit-content !important;
+
+    background-color: rgba(201, 201, 201, 0) !important;
   }
 
   .nav-mobile-toggle {
@@ -386,6 +399,7 @@ section:nth-of-type(2n + 4) {
 
   .nav-expand {
     display: flex;
+    opacity: 1 !important;
 
     margin: 0 !important;
     padding: 0 !important;
@@ -399,6 +413,10 @@ section:nth-of-type(2n + 4) {
     display: none;
   }
 
+  .nav-expanded {
+    background-color: rgba(201, 201, 201, 0) !important;
+  }
+
   .nav-items {
     display: flex;
   }
@@ -407,6 +425,8 @@ section:nth-of-type(2n + 4) {
     position: relative;
     display: flex;
     align-items: center;
+
+    margin: 0 !important;
   }
 
   .nav-link {
@@ -432,6 +452,10 @@ section:nth-of-type(2n + 4) {
     margin: 0 !important;
   }
 
+  .button-primary-nav {
+    margin-top: 0 !important;
+  }
+
   .container {
     max-width: 130ch;
   }
@@ -452,7 +476,7 @@ section:nth-of-type(2n + 4) {
     text-align: center;
   }
 
-  .market-brief > .text-highlight {
+  .market-brief > .text-gradient {
     margin: 0 auto;
   }
 

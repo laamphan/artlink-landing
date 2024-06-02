@@ -8,26 +8,21 @@ window.onscroll = () => {
   }
 };
 
-// Toggle Mobile Navigation Bar
-function toggleMobileNavbar() {
-  // ! separate into 2 functions
-
-  // Expand mobile navigation
-  let x = document.getElementsByClassName("nav-expand");
-  if (x[0].classList.contains("nav-expanded")) {
-    x[0].classList.remove("nav-expanded");
-  } else {
-    x[0].classList.add("nav-expanded");
+window.onresize = () => {
+  if (window.innerWidth < 1240) {
+    closeMobileNavbar();
   }
+};
+
+function closeMobileNavbar() {
+  let x = document.getElementsByClassName("nav-expand");
+  x[0].classList.remove("nav-expanded");
 
   // Overlay to close Nav when click out
   let y = document.getElementsByClassName("js-overlay-nav-close");
   let z = y[0];
-  if (z.classList.contains("z-m1")) {
-    z.classList.remove("z-m1");
-    z.classList.add("z-100");
-  } else {
-    z.classList.add("z-m1");
+  if (z.classList.contains("z-100")) {
+    z.classList.add("z--1");
     z.classList.remove("z-100");
   }
 }
@@ -55,18 +50,16 @@ function collapseDropdowns() {
   }
 }
 
-function closeNavBar() {
+function toggleCloseNavOverlay() {
   let y = document.getElementsByClassName("js-overlay-nav-close");
   let z = y[0];
-  if (z.classList.contains("z-m1")) {
-    z.classList.remove("z-m1");
+  if (z.classList.contains("z--1")) {
+    z.classList.remove("z--1");
     z.classList.add("z-100");
   }
 }
 
-// Carousel from here
-// Carousel from here
-// Carousel from here
+// Carousel
 
 // DOM utility functions:
 
@@ -74,12 +67,10 @@ const el = (sel, par) => (par || document).querySelector(sel);
 const els = (sel, par) => (par || document).querySelectorAll(sel);
 const elNew = (tag, prop) => Object.assign(document.createElement(tag), prop);
 
-// ---
-
 // Helper functions:
 const mod = (n, m) => ((n % m) + m) % m;
 
-// Task: Carousel:
+// Carousel:
 
 const carousel = (elCarousel) => {
   const animation = 500;
@@ -93,6 +84,11 @@ const carousel = (elCarousel) => {
   let itv; // Autoslide interval
   let tot = elsSlides.length; // Total slides
   let c = 0;
+
+  let dragPos = 0;
+  let prevPos = 0;
+  let calc = 0;
+  let x = 0;
 
   if (tot < 2) return; // Not enough slides. Do nothing.
 
@@ -162,18 +158,43 @@ const carousel = (elCarousel) => {
     clearInterval(itv);
   };
 
+  const drag = (e) => {
+    if (e.type === "touchmove") {
+      calc = (e.touches[0].clientX - x) / 1;
+    } else {
+      calc = (e.clientX - x) / 1;
+    }
+
+    dragPos = calc + prevPos;
+    calc = 0;
+  };
+
+  const handleDragEnd = () => {
+    if (dragPos < prevPos) {
+      next();
+    } else if (dragPos > prevPos) {
+      prev();
+    }
+
+    console.log(x, dragPos, prevPos);
+    elCarouselSlider.removeEventListener("touchmove", drag);
+    elCarouselSlider.removeEventListener("mousemove", drag);
+    dragPos = 0;
+    prevPos = 0;
+  };
+
   // Buttons:
 
   const elPrev = elNew("button", {
     type: "button",
-    className: "carousel-prev avatar avatar-tiny",
+    className: "carousel-prev avatar avatar-tiny cursor-pointer",
     innerHTML: "<span></span>",
     onclick: () => prev(),
   });
 
   const elNext = elNew("button", {
     type: "button",
-    className: "carousel-next avatar avatar-tiny",
+    className: "carousel-next avatar avatar-tiny cursor-pointer",
     innerHTML: "<span></span>",
     onclick: () => next(),
   });
@@ -207,6 +228,25 @@ const carousel = (elCarousel) => {
     if (c >= tot) c = 0;
     anim(0); // quickly switch to "c" slide (with animation duration 0)
   });
+
+  elCarouselSlider.addEventListener("mousedown", (e) => {
+    x = e.clientX;
+
+    elCarouselSlider.addEventListener("mousemove", drag);
+
+    prevPos += calc;
+  });
+
+  elCarouselSlider.addEventListener("touchstart", (e) => {
+    x = e.touches[0].clientX;
+
+    elCarouselSlider.addEventListener("touchmove", drag);
+
+    prevPos += calc;
+  });
+
+  elCarouselSlider.addEventListener("mouseup", handleDragEnd);
+  elCarouselSlider.addEventListener("touchend", handleDragEnd);
 
   // Pause on pointer enter:
   elCarousel.addEventListener("pointerenter", () => stop());
