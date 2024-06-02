@@ -38,6 +38,12 @@
   max-height: 45%;
 
   margin: 0 3vw 0 0;
+
+  cursor: pointer;
+}
+
+.nav-mobile-toggle > img {
+  pointer-events: all;
 }
 
 .nav-expand {

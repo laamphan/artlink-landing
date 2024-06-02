@@ -8,11 +8,35 @@ window.onscroll = () => {
   }
 };
 
+// Reset Navbar when window resized
 window.onresize = () => {
   if (window.innerWidth < 1240) {
     closeMobileNavbar();
   }
 };
+
+// Toggle Mobile Navigation Bar
+function toggleMobileNavbar() {
+  console.log("toggle");
+  // Expand mobile navigation
+  let x = document.getElementsByClassName("nav-expand");
+  if (x[0].classList.contains("nav-expanded")) {
+    x[0].classList.remove("nav-expanded");
+  } else {
+    x[0].classList.add("nav-expanded");
+  }
+
+  // Overlay to close Nav when click out
+  let y = document.getElementsByClassName("js-overlay-nav-close");
+  let z = y[0];
+  if (z.classList.contains("z-m1")) {
+    z.classList.remove("z-m1");
+    z.classList.add("z-100");
+  } else {
+    z.classList.add("z-m1");
+    z.classList.remove("z-100");
+  }
+}
 
 function closeMobileNavbar() {
   let x = document.getElementsByClassName("nav-expand");
