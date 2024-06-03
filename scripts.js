@@ -1,7 +1,7 @@
 // Change Navbar Style when scrolled
 const navbar = document.querySelector(".nav-bar");
 window.onscroll = () => {
-  if (window.scrollY > 10) {
+  if (window.scrollY > 0) {
     navbar.classList.add("nav-bar-scrolled");
   } else {
     navbar.classList.remove("nav-bar-scrolled");
@@ -17,7 +17,6 @@ window.onresize = () => {
 
 // Toggle Mobile Navigation Bar
 function toggleMobileNavbar() {
-  console.log("toggle");
   // Expand mobile navigation
   let x = document.getElementsByClassName("nav-expand");
   if (x[0].classList.contains("nav-expanded")) {
@@ -29,11 +28,11 @@ function toggleMobileNavbar() {
   // Overlay to close Nav when click out
   let y = document.getElementsByClassName("js-overlay-nav-close");
   let z = y[0];
-  if (z.classList.contains("z-m1")) {
-    z.classList.remove("z-m1");
+  if (z.classList.contains("z--1")) {
+    z.classList.remove("z--1");
     z.classList.add("z-100");
   } else {
-    z.classList.add("z-m1");
+    z.classList.add("z--1");
     z.classList.remove("z-100");
   }
 }
@@ -200,7 +199,6 @@ const carousel = (elCarousel) => {
       prev();
     }
 
-    console.log(x, dragPos, prevPos);
     elCarouselSlider.removeEventListener("touchmove", drag);
     elCarouselSlider.removeEventListener("mousemove", drag);
     dragPos = 0;

@@ -223,14 +223,14 @@ h6 {
 .button-white:hover {
   color: #fff;
 
-  transition: color 0.3s;
+  transition: 0.3s;
   background-color: #183b56;
 }
 
 .button-white:not(:hover) {
   color: #183b56;
   background-color: #fff;
-  transition: color 0.3s, background-color 0.3s;
+  transition: 0.3s;
 }
 
 .cursor-pointer {
@@ -344,7 +344,7 @@ h6 {
   font-size: min(1.2rem, 6vw);
 
   border-radius: 50%;
-  transition: color 0.3s, background-color 0.3s;
+  transition: 0.3s;
 }
 
 .icon-socials:hover {
